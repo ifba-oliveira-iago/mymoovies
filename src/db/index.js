@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
 
-const db = Pool({
+const db = new Pool({
   host: PGHOST,
   database: PGDATABASE,
   user: PGUSER,
